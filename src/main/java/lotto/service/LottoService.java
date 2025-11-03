@@ -48,7 +48,8 @@ public class LottoService {
     // 랜덤 번호 생성 (테스트용 큐가 있으면 먼저 사용)
     private List<Integer> generateRandomNumbers() {
         if (!testRandomQueue.isEmpty()) {
-            return testRandomQueue.poll();
+            List<Integer> nums = testRandomQueue.poll();
+            return nums != null ? nums : Collections.emptyList();
         }
         List<Integer> nums = new ArrayList<>();
         for (int i = 1; i <= 45; i++) nums.add(i);
