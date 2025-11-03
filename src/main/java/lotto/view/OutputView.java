@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 public class OutputView {
-    public void printPurchasedLottos(List<List<Integer>> fixedLottos) {
-        System.out.println(fixedLottos.size() + "개를 구매했습니다.");
-        for (List<Integer> lotto : fixedLottos) {
+    public void printPurchasedLottos(List<List<Integer>> lottos) {
+        System.out.println(lottos.size() + "개를 구매했습니다.");
+        for (List<Integer> lotto : lottos) {
             System.out.println(lotto);
         }
     }
@@ -23,6 +23,7 @@ public class OutputView {
             System.out.println(lotto.getNumbers());
         }
     }
+
 
     public void printResult(int totalMoney, LottoService lottoService) {
         Map<Rank, Integer> result = lottoService.getResultMap();

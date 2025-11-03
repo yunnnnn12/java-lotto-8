@@ -1,3 +1,4 @@
+// src/main/java/lotto/controller/LottoController.java
 package lotto.controller;
 
 import lotto.service.LottoService;
@@ -31,7 +32,7 @@ public class LottoController {
         outputView.printResult(totalMoney, lottoService);
     }
 
-
+    // 테스트용 고정 로또 생성 및 실행
     public void runWithFixedLotto(int totalMoney, List<Integer> winNums, int bonus, List<List<Integer>> fixedLottos) {
         lottoService.createFixedLottos(fixedLottos);
         outputView.printPurchasedLottos(fixedLottos);
